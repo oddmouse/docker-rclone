@@ -12,7 +12,13 @@ Visit http://rclone.org for detailed usage information.
 #### Docker CLI
 
 ```
-docker run -it --cap-add SYS_ADMIN --device /dev/fuse -v /home/user/shared:/mnt/mountpoint -v /home/user/.rclone.conf:/etc/rclone.conf oddmouse/rclone rclone mount remote:path /mnt/mountpoint
+docker run -it \
+    --cap-add SYS_ADMIN \
+    --device /dev/fuse \
+    -v /home/user/shared:/mnt/mountpoint \
+    -v /home/user/.rclone.conf:/etc/rclone.conf \
+    oddmouse/rclone \
+    rclone mount remote:path /mnt/mountpoint
 ```
 
 #### Docker Compose
